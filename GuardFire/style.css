@@ -1,0 +1,627 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do perfil do usuário */
+
+.user-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.user-profile p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    flex: 1;
+}
+
+.logout-button {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+.logout-button:hover {
+    background-color: #ab3c38;
+}
+
+.logout-button {
+    margin-top: 50px;
+    margin-right: 0px;
+}
+
+
+/* Configurações gerais */
+html, body {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #171717;
+    color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #d9534f, #171717);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+header .logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #a8a29e;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    margin-left: 0;
+}
+
+.header-info h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #a8a29e;
+    margin-top: 10px;
+}
+
+/* Barra de navegação */
+nav {
+    background-color: #171717;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #d9534f; 
+    transform: translateY(-5px);
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #d9534f;
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.content {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2rem;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.search-bar input {
+    padding: 12px;
+    font-size: 1rem;
+    width: 60%;
+    max-width: 500px;
+    margin-right: 10px;
+    border: 2px solid #d9534f;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #ae3f3b;
+}
+
+/* Seção Principal de Relatórios */
+main {
+    padding: 60px 20px;
+    background-color: #0e0c0c;
+}
+
+/* Estilos para o contêiner do mapa */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+/* Estilos para o mapa em si */
+#map {
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid #d9534f;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+/* Efeito de hover no mapa */
+#map:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção Hero */
+.hero {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('img/incendio.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.85;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Seções de conteúdo */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #171717;
+}
+
+/* Cards de ferramentas */
+.tools {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tool {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.tool h3 {
+    color: #d9534f;
+    font-size: 1.8rem;
+}
+
+.tool p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Rodapé geral */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a:hover {
+    color: #d9534f; /* Verde claro ao passar o mouse */
+}
+
+/* Links do rodapé */
+footer a {
+    color: #d9534f; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #f37470; 
+}
+
+/* Estilo para o link de e-mail */
+footer .footer-email {
+    color: #d9534f; 
+    text-decoration: none;
+    font-weight: bold; 
+}
+
+footer .footer-email:hover {
+    color:#d9534f;
+    text-decoration: underline; 
+}
+
+/* Alinhar os ícones sociais na horizontal */
+footer .social-links {
+    display: flex; 
+    justify-content: center; 
+    padding: 0; 
+    list-style-type: none; 
+    margin: 20px 0 0; 
+}
+
+/* Estilo para os ícones de redes sociais */
+footer .social-links li {
+    margin: 0 15px; 
+}
+
+/* Estilo para os links dos ícones sociais */
+footer .social-links li a {
+    display: inline-block;
+}
+
+/* Ajustando o tamanho e a animação dos ícones */
+footer .social-links li a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease; 
+}
+
+footer .social-links li a:hover img {
+    transform: scale(1.2); 
+}
+
+/* Efeito de aumento ao passar o mouse (opcional) */
+footer .social-links li a:hover img {
+    transform: scale(1.1);
+}
+
+/* Ícones sociais */
+.social-links a img {
+    filter: brightness(0) invert(1); 
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    filter: brightness(1) hue-rotate(180deg); 
+    transform: scale(1.2); 
+}
+
+/* Seção de clima */
+.weather {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.weather:hover {
+    transform: translateY(-5px);
+}
+
+.weather h2 {
+    font-size: 2rem;
+    color: #171717;
+}
+
+.weather-info {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Galeria de imagens */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    width: 30%;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Seção de depoimentos */
+.depoimentos {
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 800px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.depoimentos h2 {
+    font-size: 2.5rem;
+    color: #171717;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.depoimentos .depoimento {
+    background-color: #fff;
+    border-left: 5px solid #00bfa6;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.depoimentos .depoimento img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.depoimentos .depoimento blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.depoimentos .depoimento footer {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.depoimentos .mais-depoimentos {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.depoimentos .mais-depoimentos a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00bfa6;
+    text-decoration: none;
+    border-bottom: 2px solid #00bfa6;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.depoimentos .mais-depoimentos a:hover {
+    color: #009e8b;
+    border-color: #009e8b;
+}
+
+/* Estilo geral para o formulário */
+form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Estilo dos campos de entrada (input e textarea) */
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo dos campos de entrada ao focar */
+form input:focus, form textarea:focus {
+    border-color: #00bfa6;
+    outline: none;
+}
+
+/* Estilo do botão de envio */
+form button {
+    background-color: #00bfa6;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito no botão de envio ao passar o mouse */
+form button:hover {
+    background-color: #00e5b4;
+}
+
+/* Estilo do título e labels do formulário */
+form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo de mensagens de erro ou sucesso */
+form .message {
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+form .success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+form .error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .tools {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tool {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .image-gallery img {
+        width: 80%;
+    }
+
+    .news-section {
+        padding: 20px;
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .depoimento {
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .depoimento img {
+        margin-bottom: 15px;
+    }
+
+    .weather-info img {
+        width: 30px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
